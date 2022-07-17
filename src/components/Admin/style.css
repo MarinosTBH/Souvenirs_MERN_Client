@@ -1,0 +1,52 @@
+.scrollmenu{
+    display: block;
+    align-items: center;
+  }
+.scrollmenu .scrollCont {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.486);
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+    width: 90%;
+  }
+  .title  {
+    color:#333;
+  }
+
+@media  screen and (max-width: 668px) {
+    
+
+.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 100px;
+  }
+
+.scrollmenu::-webkit-scrollbar {
+    display: none; /* safari chrome opera  */
+}
+.scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+        
+.scrollmenu .scrollCont {
+    display: inline-block;
+    /* color: rgba(255, 255, 255, 0.486); */
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+    width: 90%;
+  }
+  .title  {
+    color:#333;
+  }
+  
+  .scrollmenu .scrollCont:hover {
+    background-color: rgba(224, 224, 224, 0.877);
+  }
+}
+
+

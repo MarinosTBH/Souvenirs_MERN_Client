@@ -1,0 +1,27 @@
+body{
+    /* background-color: #E1F5FE #B3E5FC; */
+    /* background: radial-gradient(#e66465, #9198e5); */
+    background: radial-gradient(
+    circle closest-corner at center 125px,
+    #bdc3c7,
+    #2c3e50 100%
+  ) no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    width:100%;
+    margin : 0;
+    /* #bdc3c7 → #2c3e50 */
+
+}
+/* @media (max-width: 600px) {
+   body{
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+    radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+    background-attachment: fixed;
+    background-size: contain;
+    width:"1" ;
+    height:"1";
+} 
+} */
+
+/* /* <img width="1" height="1" src="https://flevix.com/wp-content/uploads/2021/05/Bubble-Background.svg" class="single-featured-thumb wp-post-image"  */
