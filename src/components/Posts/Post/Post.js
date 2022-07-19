@@ -27,6 +27,7 @@ const avatarPlaceholder= "https://png.pngtree.com/png-clipart/20190619/original/
         dispatch(getUsers())
     },[]) 
     const postUser = users.find((user)=> user.name === post.name)
+    console.log(postUser);
     const Likes = () => {
         if (post.likes.length > 0) {
           return post.likes.find((like) => like === (user?.result?.sub || user?.result?._id))
@@ -41,7 +42,7 @@ const avatarPlaceholder= "https://png.pngtree.com/png-clipart/20190619/original/
       };
 
     return(
-        <Card  className={classes.card}>
+        <Card className={classes.card}>
             <CardMedia className = {classes.media} image={post?.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'}  title={post.title}></CardMedia>
             <div className={classes.overlay}>
                 <div style={{display : "flex", gap : "10px"}}>
@@ -55,7 +56,7 @@ const avatarPlaceholder= "https://png.pngtree.com/png-clipart/20190619/original/
                 <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
             </div>
 {/* edit */}
-            {(user?.result?.sub === post?.creator || user?.result?._id === post?.creator || user?.result?.role === "admin" ) && (
+            {(user?.result?._id === post?.creator || user?.result?.role === "admin" ) && (
                 <div className={classes.overlay2}>
                     <Button style={{color:'white'}} size="small" onClick={() => setCurrentId(post._id)}><MoreHorizIcon fontSize="medium"/></Button>
                 </div>

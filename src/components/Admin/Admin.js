@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import  { useDispatch, useSelector } from 'react-redux';
 import  { getUsers } from '../../actions/users';
 import  UserCard from './UserCard';
@@ -6,7 +6,6 @@ import  UserCard from './UserCard';
 
 import './style.css'
 
-import axios from 'axios';
 const Admin = () => {
  
     const userLocal = JSON.parse(localStorage.getItem('profile'));
@@ -17,7 +16,7 @@ const Admin = () => {
 
     useEffect(() => {
         dispatch(getUsers())
-    },[users]) 
+    },[dispatch]) 
 
 
   return ( 

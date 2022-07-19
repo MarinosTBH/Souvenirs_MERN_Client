@@ -11,7 +11,7 @@ const Form = ( {currentId, setCurrentId} ) =>{
     const user = JSON.parse(localStorage.getItem('profile'));
 
     const [postData, setPostData] = useState({title : '', message : '', tags : '', selectedFile : ''});
-    const [formTemplate, setFormTemplate] = useState(!currentId);
+    const [formTemplate, setFormTemplate] = useState(false);
     const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);  
     const dispatch = useDispatch();
 

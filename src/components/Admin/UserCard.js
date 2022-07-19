@@ -16,6 +16,7 @@ import CardContent from '@mui/material/CardContent';
 import './style.css'
 
 const UserCard = ({ user }) => {
+
     const Active = () => {
         return user.active? 'Block' : 'Unblock'
       }
@@ -42,7 +43,6 @@ const UserCard = ({ user }) => {
           {user.email !== "admin@dev.com" &&(<>
               <Button variant="outlined" color="primary" startIcon={<DeleteIcon />} onClick={ () => dispatch(deleteUser(user._id))} />
               <Button variant="outlined" color="secondary" onClick={() => dispatch(blockUser(user._id))}>
-                  {/* {!user.active ? 'Unblock' : 'Block'} {user.name.split(' ')[0]} */}
                   <Active user={user}/>
               </Button>
             </>)}

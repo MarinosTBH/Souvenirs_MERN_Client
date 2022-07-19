@@ -27,6 +27,7 @@ export const blockUser = (id) => async (dispatch) => {
         // const user = JSON.parse(localStorage.getItem('profile'))
         await api.blockUser(id)
         dispatch({ type : BLOCK_USER , payload : id})
+        dispatch(getUsers())
     } catch (error) {
         console.log(error);
     }

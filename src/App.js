@@ -7,7 +7,6 @@ import Home from "./components/Home/Home";
 import Auth from "./components/Auth/Auth";
 import Admin from "./components/Admin/Admin";
 
-
 const App = () => {
     return ( 
       <BrowserRouter>
