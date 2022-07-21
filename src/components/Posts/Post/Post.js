@@ -27,7 +27,7 @@ const avatarPlaceholder= "https://png.pngtree.com/png-clipart/20190619/original/
         dispatch(getUsers())
     },[]) 
     const postUser = users.find((user)=> user.name === post.name)
-    console.log(postUser);
+    // console.log(postUser);
     const Likes = () => {
         if (post.likes.length > 0) {
           return post.likes.find((like) => like === (user?.result?.sub || user?.result?._id))
@@ -46,7 +46,7 @@ const avatarPlaceholder= "https://png.pngtree.com/png-clipart/20190619/original/
             <CardMedia className = {classes.media} image={post?.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'}  title={post.title}></CardMedia>
             <div className={classes.overlay}>
                 <div style={{display : "flex", gap : "10px"}}>
-                    <Link to="/">
+                    <Link to={`user/${postUser?._id}`}>
                         <Avatar className={classes.pruple} alt={post?.name} src={postUser?.picture || avatarPlaceholder}>
                             {user?.result?.name}                        
                         </Avatar>
