@@ -1,7 +1,7 @@
 import axios from 'axios';
 
     //we can create  a base url 
-const API = axios.create( {baseURL: 'https://api-souvernis.onrender.com/' });
+const API = axios.create( {baseURL: process.env.BASE_URL });
 
 // const API = axios.create( {baseURL: 'https://souvenirsappproject.herokuapp.com/' });
 // const url =  'https://souvenirss.herokuapp.com/posts';
